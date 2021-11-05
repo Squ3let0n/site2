@@ -1,0 +1,346 @@
+@import url('http://fonts.googleapis.com/css?family=Poppins:300,400,500,600,800,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    /*scroll-behavior usado para deixar scroll mais liso*/
+    scroll-behavior: smooth;
+}
+
+body{
+     /*  usei o min-height para deixar o degradê*/ 
+    min-height: 120vh; 
+    background: linear-gradient(#2b1055,#7597de);
+    /*overflow:hiden serve para tirar a barra scroll, nesse caso tirei a barra em X*/
+    overflow-x: hidden;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 2;
+    width: 97%;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*use z-index para reativar os botões da pagina e para por ela por cima da imagem*/
+    z-index: 1000;
+}
+
+header .logo{
+    color: #fff;
+    font-weight: 700;
+    /*Usado para tirar a linha em baixo dos links (MUITO ÚTUL NÃO ESQUECER) */
+    text-decoration: none;
+    font-size: 2em;
+    /*deixa tudo em maiúsculo uppercase*/
+    text-transform: none;
+    letter-spacing: 2px;
+    padding-left: 30px;
+}
+
+header ul{
+    display: flex;
+    justify-content: center;
+}
+
+header ul li{
+    /*list-style usado para tirar as bolinhas da lista não ordenada (IMPORTante)*/
+    list-style: none;
+    /*margin-left distancia entre cada conteudo da lista(IMPORTANTE)*/
+    margin-left: 20px;
+}
+
+header ul li a{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #fff;
+    border-radius: 20px;
+}
+
+/*Hover serve para dar destaque nos locais onde passa o mouse, faz mudar de cor, background é a cor de fundo
+e color é a cor que o texto irá ficar*/
+
+header ul li a:hover,
+header ul li a.active {
+    background: #fff;
+    color: #2b1055;
+}
+
+section::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #1c0522, transparent);
+    z-index: 1000;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+section img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    pointer-events: none;
+}
+
+section img#mountains_behind{
+    mix-blend-mode: screen;
+}
+
+section img#mountains_front{
+    z-index: 10;
+}
+
+#text{
+    position: absolute;
+    right: -400px;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 7.5vw;
+    z-index: 9;
+}
+
+#btn{
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background: #fff;
+    color: #2b1055;
+    font-size: 1.5em;
+    z-index: 20;
+    transform: translateY(100px);
+}
+
+.sec{
+    position: relative;
+    padding: 100px;;
+    text-align: center;
+    background: #140624;
+}
+
+.sec h2 {
+    font-size: 3.5em;
+    margin-bottom:10px;
+    color: #fff;
+}
+
+.sec p{
+    font-size: 1em;
+    color: #fff;
+}
+
+section.box{
+    position: relative;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 400px 300px;
+    left: 0;
+    min-width: 100vh;
+    background: #350048;
+    background: linear-gradient(to bottom, #1c0522, transparent);
+}
+
+section.box::before{
+    /*barra rosa*/
+    content: '';
+    position: absolute;
+    top: 45%;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: #bd00ff;
+    backdrop-filter:blur(15px);
+}
+
+.container{
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 390px;
+    left: 0px;
+    justify-content: space-around;
+}
+
+.container .card {
+    position: relative;
+    width: 250px;
+    height: 300px;
+    text-align: center;
+    z-index: 1000;
+    margin: 20px 20px 60px;
+    transition: 0.5s;
+}
+
+.container .card .box {
+    position:absolute;
+    top: 0;
+    left: -200px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255,255,255,0.05);
+    box-shadow:0 15px 35px rgba(0,0,0,0.5);
+    backdrop-filter:blur(15px);
+    border: 1px solid rgba(255,255,255,0.1);
+    z-index: 10;
+    border-radius: 10px;
+}
+
+.porcentagem{
+    position:absolute;
+    width: 150px;
+    height: 150px;
+    border: 50%;
+    z-index: 10;
+}
+
+.porcentagem .number{
+    position:relative;
+    top: -115px;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.porcentagem .number h2{
+    color: #fff;
+    font-weight: 700;
+    font-size:40px;
+}
+
+.porcentagem .number h2 span{
+    font- size: 20px;
+}
+
+.texts{
+    position:absolute;
+    bottom: -40px;
+    left: -80px;
+    color: #fff;
+    transform: translate(-44%);
+    text-align: center;
+    background: red;
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 18px;
+    padding: 30px 20px 10px;
+    letter-spacing:1px;
+    text-transform: uppercase;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    z-index: 0;
+    pointer-events: none;
+    transition: bottom 0.5s, z-index 0s, transform 0.5s, padding 0.5s;
+    transition-delay: 0.5s,0.5s,0s,0.5s;
+}
+
+.card:hover .texts{
+    transition-delay: 0s,0.5s,0s,0s;
+    bottom: -70px;
+    z-index: 11;
+    transform: translateX(-50%) translateY(-50%);
+    padding: 30px 20px 10px;
+}
+
+.card:nth-child(1) .texts{
+    background:#ff0461;
+}
+.card:nth-child(2) .texts{
+    background:#2bd2ff;
+}
+.card:nth-child(3) .texts{
+    background:#18d549;
+}
+
+svg{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    z-index: 100;
+}
+
+svg circle{
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke-width:10;
+    stroke: rgba(255,255,255,0.05);
+    transform: translate(5px,5px);
+    stroke-linecap: round;
+}
+
+svg circle:nth-child(2){
+    stroke: #fff;
+    stroke-dasharray: 440px;
+    stroke-dashoffset: 200px;
+}
+
+.card:nth-child(1) svg circle:nth-child(2){
+    stroke-dashoffset: calc(440px - (440px*60)/100);
+}
+
+.card:nth-child(2) svg circle:nth-child(2){
+    stroke-dashoffset: calc(440px - (440px*58)/100);
+}
+
+.card:nth-child(3) svg circle:nth-child(2){
+    stroke-dashoffset: calc(440px - (440px*45)/100);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Dark-mode{
+    background: none;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

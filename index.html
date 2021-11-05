@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Teste de site</title>
+        <link rel="stylesheet" type="text/css" href="style.css" >
+    </head>
+    <body>   
+        <header>
+            <a href="#" class="logo">Squ3let0n</a>
+            <ul>
+               <!-- <li><button id="Dark-mode"><img src="img/sun-day-weather-symbol_icon-icons.com_73146.png" width="10" height="10"></button></li>-->
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Conhecimentos</a></li>
+                <li><a href="#">Trabalhos</a></li>
+                <li><a href="#">Contatos</a></li>
+            </ul>
+        </header>
+        <section>
+            <img src="/imgs/stars.png" id="stars">
+            <img src="/imgs/mountains_behind.png" id="mountains_behind">
+            <h2 id="text">Squ3let0n</h2>
+            <a href="#sec" id="btn">Saiba mais</a>
+            <img src="/imgs/mountains_front.png" id="mountains_front">
+
+        </section>
+        <div class="sec" id="sec">
+        <h2>Minha História</h2> 
+        <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.<br><br>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.</p>
+        </div>
+        <script>
+            let stars = document.getElementById('stars');
+            let mountains_behind = document.getElementById('mountains_behind');
+            let text = document.getElementById('text');
+            let bnt = document.getElementById('bnt');
+            let mountains_front = document.getElementById('mountains_front');
+            let headers = document.querySelector('header');
+            //todo comando abaixo foi usado para fazer o efeito das estrelas se movendo!!!->
+            window.addEventListener('scroll', function() {
+                let value = window.scrollY;
+                //Esse JS faz com que a imagem de fundo se movimente para cima baixo ou lados!->
+                stars.style.left = value *0.25 + 'px';
+                mountains_behind.style.top = value * 1.05 + 'px';
+                text.style.marginRight = value * 4 + 'px';
+                text.style.marginTop = value * 1 + 'px';
+                btn.style.marginTop = value * 1.5 + 'px';
+                header.style.Top = value * 0.5 +  'px';
+            })
+
+        </script>
+        <section class="box">
+        <div class="container">
+            <div class="card">
+                <div class="box">
+                    <div class="porcentagem">
+                    <svg>
+                        <circle cx="70" cy="70" r="70"></circle>
+                        <circle cx="70" cy="70" r="70"></circle>
+                    </svg>
+                    <div class="number">
+                        <h2>60<span>%</span></h2>
+                    </div>
+                    </div>
+                </div>
+                <div class="texts">Html</div>
+            </div>
+            <div class="card">
+                <div class="box">
+                    <div class="porcentagem">
+                    <svg>
+                        <circle cx="70" cy="70" r="70"></circle>
+                        <circle cx="70" cy="70" r="70"></circle>
+                    </svg>
+                    <div class="number">
+                        <h2>58<span>%</span></h2>
+                    </div>
+                    </div>
+                </div>
+                <div class="texts">CSS</div>
+                <div class="card">
+                <div class="box">
+                    <div class="porcentagem">
+                    <svg>
+                        <circle cx="70" cy="70" r="70"></circle>
+                        <circle cx="70" cy="70" r="70"></circle>
+                    </svg>
+                    <div class="number">
+                        <h2>45<span>%</span></h2>
+                    </div>
+                    </div>
+                </div>
+                <div class="texts">JavaScript</div>
+            </div>
+            </div>
+        </div>
+        </section>
+    </body> 
+</html>
